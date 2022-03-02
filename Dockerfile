@@ -5,5 +5,5 @@ ENV REPOSITORY=github.com/ozaki-physics/gcp-training
 WORKDIR /go/src/$REPOSITORY
 COPY . .
 RUN go mod download
-RUN go build -o /go/bin main.go
-CMD ["/go/bin/main"]
+# RUN go build -o /go/bin main.go
+# CMD ["/go/bin/main"]
