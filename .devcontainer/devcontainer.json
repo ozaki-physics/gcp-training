@@ -1,0 +1,21 @@
+{
+  "name": "Docker Compose(VS Code in Container)",
+  // VS Code で開きたいコンテナ
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  // 'service' プロパティは、VS Code が使用すべきコンテナのサービス名
+	"service": "gcp_training",
+  // VS Code が接続時にデフォルトで開くパス
+	"workspaceFolder": "/go/src/github.com/ozaki-physics/gcp-training",
+  // コンテナ内の VS Code で使いたい拡張機能
+	"extensions": [
+    // golang のデバックする拡張機能
+    // 様々な モジュールが追加で必要だが コンテナ内の VS Code を開いて 通知欄から install All をしてコンテナ削除しない運用にする
+    "golang.go",
+    // git の履歴が確認できる拡張機能(ホスト側だけの拡張が推奨) 視覚的に見やすくしたいから
+    "donjayamanne.githistory",
+  ],
+  // VS Code の go の拡張機能(golang.go)を使うときに 毎回表示されるのが面倒だから先にインストールしておく
+  "postCreateCommand": "go install -v golang.org/x/tools/gopls@latest"
+}
