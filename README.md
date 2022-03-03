@@ -13,4 +13,6 @@ gopls だけ VSCode の通知から install する
 4. 開発したコードをデプロイする  
 
 ## 試したこと
-- Secret Manager から値を取得する
+- App Engine へデプロイ [メモ]()
+- Secret Manager から値を取得する [メモ](./docs/SecretManager.md)
+- LINE bot でオウム返しをする [メモ](./docs/LINEbot.md)
