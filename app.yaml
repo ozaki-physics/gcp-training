@@ -1,0 +1,13 @@
+runtime: go116
+
+instance_class: F1
+
+automatic_scaling:
+  max_instances: 1
+  min_instances: 0
+  max_idle_instances: 1
+  min_idle_instances: 0
+  # 指定した min_pending_latency 未満の場合、App Engine は新しいインスタンスを作成しません
+  min_pending_latency: 3000ms
+  # 新しいインスタンスを起動するための CPU 使用率のしきい値
+  target_cpu_utilization: 0.8
