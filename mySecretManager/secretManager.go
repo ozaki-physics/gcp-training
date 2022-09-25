@@ -3,7 +3,6 @@ package mysecretmanager
 import (
 	"context"
 	"fmt"
-	"log"
 	"strconv"
 
 	secretmanager "cloud.google.com/go/secretmanager/apiv1"
@@ -29,6 +28,6 @@ func GetGCPSecretValue(projectId, name string, version int) (string, error) {
 	}
 
 	// ログに書き出す
-	log.Printf("Plaintext: %s\n", string(result.Payload.Data))
+	// log.Printf("Plaintext: %s\n", string(result.Payload.Data))
 	return string(result.Payload.Data), nil
 }
