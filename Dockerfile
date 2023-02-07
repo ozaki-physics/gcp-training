@@ -1,5 +1,5 @@
 # Google App Engine の最新
-FROM golang:1.16
+FROM golang:1.19
 
 ENV REPOSITORY=github.com/ozaki-physics/gcp-training
 WORKDIR /go/src/$REPOSITORY
