@@ -3,11 +3,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: go1.16:gcp_training
+    image: go1.19:gcp_training
     container_name: go_gcp_training
     tty: true
     volumes:
       - .:/go/src/github.com/ozaki-physics/gcp-training:rw
     ports:
-      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:8888:8080"
     command: bash
